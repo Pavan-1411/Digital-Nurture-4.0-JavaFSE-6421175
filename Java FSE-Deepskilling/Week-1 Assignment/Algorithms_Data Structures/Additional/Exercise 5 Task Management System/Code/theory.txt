@@ -1,0 +1,75 @@
+Exercise 5: Task Management System
+
+
+1) Explain the different types of linked lists (Singly Linked List, Doubly Linked List).
+
+Singly Linked List: A linear data structure where each element called a node contains:
+
+			-> data 
+
+			-> a pointer to the next node in the list
+
+structure:
+	
+	[ data | Next ] -> [ data | Next ] ->[ data | Next ] ->[ data | Next ] ->[ data | Next ] -> null
+
+Node class: 
+	
+	class Node{
+		int data;
+		Node Next;
+		Node(int data){
+ 			this.data = data;
+			Next = null;
+		}
+	}
+
+
+Doubly Linked List: It is also a linear data structure where each element called a node contains:
+				
+			-> data (of any type may be built in data types or user defined data types)
+
+			-> a pointer to the next node in the list
+			
+			-> a pointer to the previous node in the list
+
+
+structure:
+	
+	null <-> [ Prev | data | Next ] <-> [ Prev | data | Next ] <-> [ Prev | data | Next ] <-> [ Prev | data | Next ] <-> [ Prev | data | Next ] <-> null
+
+
+Node class: 
+	
+	class Node{
+		int data;
+		Node Next;
+		Node Prev;
+		Node(int data){
+ 			this.data = data;
+			Next = null;
+			Prev = null;
+		}
+	}
+
+
+Q) Analyze the time complexity of each operation.
+
+Operation		Time Complexity
+
+Insertion at Head	  O(1)		    Constant time
+Insertion at End	  O(n)		    Traverse till last nod
+Deletion		      O(n)		    finding the node which we want to delete takes O(n)
+Search			      O(n)		    Linear search
+
+Q) Discuss the advantages of linked lists over arrays for dynamic data.
+
+Dynamic Size Allocation - can grow or shrink at runtime as needed.
+Efficient Insertions and Deletions- easy to insert/delete an element since no shifting is required like in the array.
+No Need for Contiguous Memory-store elements in non-contiguous memory.
+
+
+
+
+
+

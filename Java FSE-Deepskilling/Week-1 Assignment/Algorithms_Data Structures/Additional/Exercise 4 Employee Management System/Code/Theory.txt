@@ -1,0 +1,39 @@
+Exercise 4: Employee Management System
+
+
+1) Explain how arrays are represented in memory and their advantages.
+
+An array is a linear data structure that stores a fixed-size collection of elements of 
+the same data type in contiguous memory locations. Each element can be efficiently accessed 
+using an index, starting from 0.
+arr:   [ 4 bytes ][ 4 bytes ][ 4 bytes ][ 4 bytes ][ 4 bytes ][ 4 bytes ]
+        2000      2004       2008       2012       2016       2020
+
+The first element is stored at the base address (like 2000), and each subsequent element is placed at an offset based on the element size.
+
+To access the element at a specific index, the address is calculated using : address = base_address + (index × size_of_each_element)
+Advantages:
+
+Constant-Time Access (O(1)): Elements can be accessed directly using their index.
+Efficient Iteration: Arrays are well-suited for traversal using loops due to their contiguous memory layout.
+
+
+2) Analyze the time complexity of each operation (add, search, traverse, delete).
+
+Add -     O(1) - go the available index adds the element constant time operation 
+
+Search -  O(n) - Search by employeeId or name etc.	
+
+Traverse -O(n) - Visit every element	
+
+Delete -  O(n) -first we need to find the element and shift elements after deletion
+
+
+3) Discuss the limitations of arrays and when to use them.
+Limitations:
+fixed size – Cannot change size after creation.
+Costly insertion/deletion – Requires shifting elements (O(n)).
+Contiguous memory needed – Can be hard to allocate large blocks.
+Use Cases:
+-When the Number of Elements is Known in Advance
+-For Fast Access Using Indexing

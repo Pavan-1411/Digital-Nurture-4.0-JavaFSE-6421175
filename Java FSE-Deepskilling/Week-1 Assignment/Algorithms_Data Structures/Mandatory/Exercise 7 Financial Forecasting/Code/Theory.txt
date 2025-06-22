@@ -1,0 +1,29 @@
+Exercise 7: Financial Forecasting
+
+1) Explain the concept of recursion and how it can simplify certain problems.
+
+Recursion is a powerful concept in Data Structures and Algorithms (DSA), especially useful for problems that require exploring all possible outcomes or building solutions based on previous steps.
+It involves solving a complex problem by breaking it down into smaller instances of the same problem and solving each recursively.
+In this case, recursion can be effectively applied because to compute the value after N years, we first need to know the value after (N−1) years. The calculation follows this relation:
+Value at year N = Value at year (N−1) + (Value at year (N−1) × GrowthRate / 100)
+However, since we don’t initially know the value for year (N−1), we must calculate it recursively—breaking the problem down until we reach the base case (usually year 0, where the initial value is known).
+
+therefore, value after N-1 years =  (value after N-2 years) + (value after N-2 years*(growth/100))
+.
+.
+.
+this will go on
+at a certain point we get 0 years means the principle value/ initial amount is itself the final value
+
+Recursion tree:
+value(N) --> value(N-1) --> value(N-2) --> ............-->value(0){initial vlaue/Base Case}
+
+2) Discuss the time complexity of your recursive algorithm.
+The recursive function calculates the value after N years based on the value from the **(N−1)**th year, and so on, until it reaches the base case (year 0).
+Each recursive call reduces the value of years by 1, and does one constant-time multiplication and addition per call.
+
+Therefore, the time complexity is:O(N) where N is the number of years
+
+3) Explain how to optimize the recursive solution to avoid excessive computation.
+we  can use iterative approach(bottom up approach) to avoid recursive stack space of O(N);
+In case multiple queries for forecasting we can use Dynamic programming to avoid excessive computation.

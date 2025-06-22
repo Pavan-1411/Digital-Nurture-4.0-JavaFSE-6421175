@@ -1,0 +1,52 @@
+Exercise 6: Library Management System
+
+
+1) Explain linear search and binary search algorithms.
+
+Linear Search: A simple search algorithm that checks each element one by one from the beginning until the target element is found or all the elements are checked.
+
+Algorithm:
+
+-Start from index 0.
+
+-Compare each element with the target.
+
+-Return index if found, else return -1.
+
+
+
+Binary Search: An efficient search algorithm that repeatedly divides the sorted list of elements in to two halves to find the target.
+
+Algorithm:
+
+-Sort the list first if it is unsorted(it is the first step in binary search if the array is not sorted then we cannot apply binary search on it)
+
+-Compare the target with the middle element. (mid = (low + high)/2)
+
+-if (target == middle), return index.
+
+-if (target < middle) -> search left half.[low-mid]
+
+-if (target > middle) -> search right half.[mid+1-high]
+
+
+2) Compare the time complexity of linear and binary search.
+
+Case	   Linear Search		Binary Search
+
+Best Case	    O(1)		    O(1)
+Average Case	O(n)		  O(log n)
+Worst Case	    O(n)		  O(log n)
+
+
+
+3) Discuss when to use each algorithm based on the data set size and order.
+
+when the data set size is small and unsorted then it is better to use Linear search.
+when the data set size is large or sorted then it is better to use Binary search.
+
+if the data set is already sorted better to use binary search,
+if the data set is unsorted and number of search operations are very very small then we can use linear search,
+if the data set is unsorted and number of search operations are unknown or large then we can use binary search.
+
+

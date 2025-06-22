@@ -1,0 +1,57 @@
+Exercise 3: Sorting Customer Orders
+
+
+1) Explain different sorting algorithms (Bubble Sort, Insertion Sort, Quick Sort, Merge Sort).
+
+Bubble Sort:
+Process: It repeatedly compares adjacent elements and swaps them if they are in the wrong order, gradually moving the largest unsorted element to its correct position with each pass.
+
+Time Complexity:
+Best Case: O(n) (when the array is already sorted)
+Worst Case: O(n²)
+Space Complexity: O(1) (in place)
+
+
+
+Insertion Sort:
+Process: It builds the sorted portion of the array one element at a time by inserting each new element into its correct position within the already sorted section.
+
+Time Complexity:
+Best Case: O(n) (when the array is already sorted)
+Worst Case: O(n²)
+Space Complexity: O(1) (in place)
+
+
+
+Merge Sort:
+Process: Merge Sort follows a divide-and-conquer approach by splitting the list into two halves, recursively sorting each half, and merging them back together in a sorted manner.
+
+Time Complexity: O(n log n) (all cases)
+Space Complexity: O(n) (requires extra space for merging)
+
+
+
+Quick Sort
+Process: Quick Sort selects a "pivot" element and partitions the array into two subarrays—one with elements less than the pivot and the other with elements greater than the pivot—then recursively sorts the subarrays.
+
+Time Complexity:
+Best Case:       O(n log n)
+Average Case:    O(n log n)
+Worst Case:      O(n²) (occurs when the pivot is poorly chosen)
+Space Complexity: O(1) (in place)
+		          O(log n) (for recursive stack)
+
+
+2) Compare the performance (time complexity) of Bubble Sort and Quick Sort & Discuss why Quick Sort is generally preferred over Bubble Sort.
+
+Case                Bubble Sort	  Quick Sort
+Best Case	          O(n)	          O(n log n)
+Average Case	      O(n²)	          O(n log n)
+Worst Case	          O(n²)	          O(n²)
+Space Complexity	  O(1)	          O(log n)
+
+Quick Sort is significantly faster than Bubble Sort on large datasets. Bubble Sort has O(n²) in most cases, while Quick Sort averages O(n log n). Quick Sort is more efficient in-place.
+
+
+
+
